@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style type="text/css">
+        body {
+            margin-top: 140px;
+            margin-bottom: 240px;
+            margin-left: 280px;
+            margin-right: 240px;
+        }
+
+        table {
+            width: 20px;
+            height: 100px;
+        }
+
+        
+
+        input[type="button"] {
+            width: 100%;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <form>
+        <div>
+            <form>
+                <form name="Myform" method="post" onsubmit="return validateform()"></form>
+                <table border="1px solid black">
+                    <th>CALCULATOR</th>
+                    <tr>
+                        <td colspan="3" id = result><input type="text" name="result"></td>
+                        <td><input type="button" value="C"> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="1"> </td>
+                        <td><input type="button" value="2"></td>
+                        <td><input type="button" value="3"></td>
+                        <td><input type="button" value="+"></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="4"></td>
+                        <td><input type="button" value="5"></td>
+                        <td><input type="button" value="6"></td>
+                        <td><input type="button" value="-"> </td>
+                    </tr>
+                    <tr>
+                        <td> <input type="button" value="7"></td>
+                        <td> <input type="button" value="8"></td>
+                        <td><input type="button" value="9"></td>
+                        <td><input type="button" value="*"> </td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" value="."></td>
+                        <td><input type="button" value="0"></td>
+                        <td><input type="button" value="/"> </td>
+                        <td><input type="submit" value="=">
+                </table>
+                </td>
+                </tr>
+
+
+        </div>
+    </form>
+<script>function cal(val) 
+    { 
+        document.getElementById("result").value+=val 
+    } 
+function solve(val)
+{
+   let x= document.getElementById("result").value;
+   let y= eval(x);
+   document.getElementById("result").value=y;
+}
+function clr()
+{
+document.getElementById("result").value=" ";
+}</script>
+
+</body>
+
+</html>
